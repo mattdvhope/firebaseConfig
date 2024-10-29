@@ -26,6 +26,7 @@ exports.handler = async (event, context) => {
   try {
     // Step 2: Verify the ID token with Firebase Admin
     const decodedToken = await admin.auth().verifyIdToken(idToken);
+console.log("DECODING TOKEN HERE!!!!!!");
 
     // Proceed only if the token is verified successfully
     const firebaseConfig = {
